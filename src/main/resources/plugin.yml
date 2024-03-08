@@ -1,0 +1,4 @@
+name: VanishPlus
+version: '${project.version}'
+main: xyz.herberto.vanishplus.VanishPlus
+api-version: '1.19'
