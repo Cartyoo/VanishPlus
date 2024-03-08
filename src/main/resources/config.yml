@@ -1,0 +1,8 @@
+messages:
+  vanish-already-enabled: '&cYou are already vanished.'
+  vanish-already-enabled-other: '&c%player% is already vanished.'
+  vanish-already-disabled: '&cYou are already unvanished.'
+  vanish-already-disabled-other: '&c%player% is already unvanished.'
+  not-a-value: '&cUnrecognized value "%value%". Please use either enable or disable.' # %value% is the invalid value the user typed
+  vanished: '&aYou are now %action%.' # %action% is either "vanished" or "visible".
+  vanished-other: '&aYou have %action% %target%' # %action% is either "vanished" or "unvanished".
