@@ -4,6 +4,7 @@ import co.aikar.commands.BukkitCommandManager;
 import lombok.Getter;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.plugin.java.JavaPlugin;
+import xyz.herberto.vanishplus.bstats.Metrics;
 import xyz.herberto.vanishplus.commands.VanishCommand;
 import xyz.herberto.vanishplus.papi.VanishPlusExpansion;
 
@@ -32,7 +33,12 @@ public final class VanishPlus extends JavaPlugin {
         loadFiles();
 
         /* Register the PlaceholderAPI Expansion */
-        new VanishPlusExpansion(this).register();
+        if(this.getServer().getPluginManager().getPlugin("PlaceholderAPI") != null) {
+            new VanishPlusExpansion(this).register();
+        }
+
+        /* Register bStats Metrics */
+        Metrics metrics = new Metrics(this, 21273);
 
 
     }

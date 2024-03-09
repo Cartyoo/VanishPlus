@@ -3,6 +3,8 @@ package xyz.herberto.vanishplus.papi;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.OfflinePlayer;
 import xyz.herberto.vanishplus.VanishPlus;
+import xyz.herberto.vanishplus.commands.VanishCommand;
+import xyz.herberto.vanishplus.utils.VanishMap;
 
 public class VanishPlusExpansion extends PlaceholderExpansion {
 
@@ -36,7 +38,7 @@ public class VanishPlusExpansion extends PlaceholderExpansion {
     @Override
     public String onRequest(OfflinePlayer player, String params) {
         if(params.equalsIgnoreCase("vanished")) {
-            return "";
+            return String.valueOf(VanishMap.getVanished(player.getUniqueId()));
         }
 
         return null;
